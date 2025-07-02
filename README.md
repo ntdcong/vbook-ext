@@ -6,14 +6,16 @@
 
 ```
 comic-extension/
-├── chap.js
-├── detail.js
-├── genre.js
-├── home.js
-├── search.js
-├── toc.js
+├── icon.png
 ├── plugin.json
-└── README.md
+├── src
+│   ├── chap.js
+│   ├── detail.js
+│   ├── genre.js
+│   ├── home.js
+│   ├── search.js
+│   ├── toc.js
+
 ```
 
 ## Hướng dẫn tạo extension mới
@@ -77,4 +79,6 @@ comic-extension/
 }
 ```
 
-Chúc bạn thành
+Chúc bạn thành công!
+
+---
