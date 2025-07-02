@@ -1,10 +1,8 @@
 load('config.js');
 
 function execute(url) {
-    // Chuẩn hóa domain về BASE_URL
     url = url.replace(/^(?:https?:\/\/)?(?:www\.)?[^\/]+/, BASE_URL);
 
-    // Thêm /chapterlist/ nếu thiếu
     if (!url.endsWith("/chapterlist/")) {
         if (!url.endsWith("/")) url += "/";
         url += "chapterlist/";
@@ -12,7 +10,7 @@ function execute(url) {
 
     let response = fetch(url);
     if (!response.ok) {
-        return Response.error("Không thể tải trang chương.");
+        return Response.error("Unable to load chapter page.");
     }
 
     let doc = response.html();
@@ -32,11 +30,8 @@ function execute(url) {
     });
 
     if (chapters.length === 0) {
-        return Response.error("Không tìm thấy chương nào.");
+        return Response.error("No chapters found.");
     }
 
-    // Đảo thứ tự: từ cũ đến mới
     return Response.success(chapters.reverse());
 }
-
-

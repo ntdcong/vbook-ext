@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "name": "Comic Extension",
+    "author": "Your Name",
+    "version": 1,
+    "source": "https://yourcomicwebsite.com",
+    "regexp": "yourcomicwebsite\\.com/(manga|reader)/[^/]+(/chapter-\\d+)?/?$",
+    "description": "An extension for reading comics on yourcomicwebsite.com",
+    "locale": "en_US",
+    "type": "comic",
+    "language": "javascript"
+  },
+  "script": {
+    "home": "home.js",
+    "genre": "genre.js",
+    "search": "search.js",
+    "detail": "detail.js",
+    "toc": "toc.js",
+    "chap": "chap.js"
+  }
+}
